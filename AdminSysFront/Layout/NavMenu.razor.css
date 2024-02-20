@@ -1,0 +1,114 @@
+#iconSidebar {
+    width: 50px;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    margin: 0;
+    color: white;
+    background-color: #3f3f9e;
+}
+
+i {
+    font-size: 1.5em;
+}
+
+.buttonIcn {
+    padding: 5px;
+    background-color: #3f3f9e;
+    color: #87a8cb;
+    margin-bottom: 10px;
+}
+
+    .buttonIcn:hover {
+        background-color: #3f3f9e;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+
+.icon-container {
+    position: relative;
+    display: inline-block;
+}
+
+.indicator-dot {
+    position: absolute;
+    top: 142px;
+    left: 32px;
+    right: 0;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: #d6e269;
+    border-radius: 50%;
+}
+
+
+#menuSidebar {
+    /*min-width: 400px;*/
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: width 0.5s;
+    background-color: #c7cde5;
+    color: #183f85;
+    margin-left: 50px;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+}
+
+.w3-container {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* boton cerrar menu */
+.buttonCloseM {
+    background-color: #c7cde5;
+    color: #183f85;
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+    .buttonCloseM:hover {
+        background-color: #3f3f9e;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+
+/*input buscar */
+.w3-input {
+    color: #183f85;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+    .w3-input:focus {
+        border-color: #ffffff;
+    }
+
+.buttonCancelF {
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+    background-color: #c7cde5;
+    color: #183f85;
+    border: none;
+}
+
+    .buttonCancelF:hover {
+        background-color: #3f3f9e;
+        color: #ffffff;
+        cursor: pointer;
+    }

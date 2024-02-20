@@ -1,0 +1,29 @@
+﻿@* @* @page "/usuarios"
+@using AdminSysFront.Modelos
+@* @using AdminSysFront.Servicios *@
+@* @inject UsuarioService UsuarioService *@
+
+@* <h3>Lista de Usuarios</h3>
+ *@
+@* @if (Usuarios != null)
+{
+    foreach (var usuario in Usuarios)
+    {
+        <p>@usuario.Nombre</p>
+    }
+}
+
+@code {
+    List<AdUsuario> Usuarios;
+
+    public UsuariosListar(List<AdUsuario> usuarios)
+    {
+        Usuarios = usuarios;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Obtener la lista de usuarios al inicializar el componente
+        Usuarios = await UsuarioService.ObtenerUsuarios();
+    }
+}  *@

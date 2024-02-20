@@ -1,0 +1,43 @@
+﻿@inherits LayoutComponentBase
+
+@* iconos *@
+<div>
+    <div id="iconSidebar" class="w3-sidebar">
+        <a href="#" title="Página principal" class="w3-bar-item buttonIcn"><i class="fa fa-home"></i></a>
+        <a href="#" onclick="w3_open()" title="Buscar dentro del menu" class="w3-bar-item buttonIcn"><i class="fa fa-search"></i></a>
+        <a href="#" onclick="w3_open()" id="iconmensaje" title="No hay reportes nuevos" class="w3-bar-item buttonIcn"><i class="fa fa-envelope"></i></a>
+        <a href="#" onclick="w3_close()" title="Cerrar menu" class="w3-bar-item buttonIcn"><i class="fa-solid fa-xmark"></i></a>
+
+    </div>
+</div>
+
+@* menu *@
+<div class="w3-sidebar w3-bar-block w3-border-right" style="display: none" id="menuSidebar">
+    <div class="w3-row w3-right-align">
+        <button type="button" class="buttonCloseM" title="Cerrar el menú" onclick="w3_close()"><i class="fa-regular fa-circle-xmark"></i></button>
+    </div>
+
+    <div id="pathDisplay" style="margin: 10px 0;"><span style="font-weight: bold;">GuateNóminas</span> </div>
+
+    <div class="flex-container" style="margin-bottom: 10px;">
+        <input class="w3-input" type="text" placeholder="Buscar..." id="myInput" onkeyup="filtros()">
+        <button type="button" class="buttonCancelF" title="Cancelar Busqueda" onclick="cancelFiltros()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+
+     <div id="menu">
+        <a href="#" class="w3-bar-item w3-button">Usuarios</a>
+        <a href="#" class="w3-bar-item w3-button">Link 2</a>
+        <a href="#" class="w3-bar-item w3-button">Link 3</a>
+    </div>
+</div>
+
+@code {
+    private bool collapseNavMenu = true;
+
+    private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    private void ToggleNavMenu()
+    {
+        collapseNavMenu = !collapseNavMenu;
+    }
+}

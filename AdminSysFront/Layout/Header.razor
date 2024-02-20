@@ -1,0 +1,53 @@
+﻿@inherits LayoutComponentBase
+
+<div class="header">
+    <div class="w3-col c1">
+        <div class="w3-row msi">
+            <div class="w3-col">
+                <button id="openNav" type="button" class="buttonOpenM w3-xlarge" title="Abrir el menú" onclick="w3_open()"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <div class="w3-col">
+                <img src="../static/img/logoSIAF.png" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="w3-col c2">
+        <p>Sistema de Nómina, Registro de Servicios Personales, Estudios y/o Servicios Individuales y Otros Relacionados con el Recurso Humano</p>
+    </div>
+
+    <div class="w3-col c3">
+        <div class="w3-col c31">
+            <div class="w3-row" style="width: 100%">
+                GUATENÓMINAS @* &ensp; <%=Session("Ambiente")%>&ensp;<asp:Label ID="Label1" runat="server"> </asp:Label>
+                [<%=Application("SERVIDOR_PRESENTACION")%>] &ensp;<br>
+                <asp:Label ID="lblInstitucion" runat="server"></asp:Label> *@
+            </div>
+            <div class="w3-row txtuser" style="width: 100%">
+                <span>@* <%=Session("Usuario")%> *@ - Ministerio de Finanzas Públicas</span>
+            </div>
+        </div>
+
+        <div class="w3-col c32">
+            <a href="#" title="Salir del Sistema"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </div>
+    </div>
+
+</div>
+
+
+<script>
+    function w3_open() {
+        document.getElementById("main").style.marginLeft = "25%";
+        document.getElementById("menuSidebar").style.width = "25%";
+        document.getElementById("menuSidebar").style.display = "block";
+        document.getElementById("openNav").style.display = 'none';
+    }
+    function w3_close() {
+        document.getElementById("main").style.marginLeft = "0%";
+        document.getElementById("menuSidebar").style.display = "none";
+        document.getElementById("openNav").style.display = "inline-block";
+    }
+</script>
+@code {
+
+}
